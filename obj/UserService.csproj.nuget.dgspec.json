@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Polibuda\\PSOiR\\PSOiR\\UserService\\UserService.csproj": {}
+    "c:\\Polibuda\\PSOiR\\PSOiR\\UserService\\UserService.csproj": {}
   },
   "projects": {
-    "C:\\Polibuda\\PSOiR\\PSOiR\\UserService\\UserService.csproj": {
+    "c:\\Polibuda\\PSOiR\\PSOiR\\UserService\\UserService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Polibuda\\PSOiR\\PSOiR\\UserService\\UserService.csproj",
+        "projectUniqueName": "c:\\Polibuda\\PSOiR\\PSOiR\\UserService\\UserService.csproj",
         "projectName": "UserService",
-        "projectPath": "C:\\Polibuda\\PSOiR\\PSOiR\\UserService\\UserService.csproj",
+        "projectPath": "c:\\Polibuda\\PSOiR\\PSOiR\\UserService\\UserService.csproj",
         "packagesPath": "C:\\Users\\bortn\\.nuget\\packages\\",
-        "outputPath": "C:\\Polibuda\\PSOiR\\PSOiR\\UserService\\obj\\",
+        "outputPath": "c:\\Polibuda\\PSOiR\\PSOiR\\UserService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
