@@ -86,7 +86,7 @@ namespace UserService
                     await context.Response.WriteAsync(File.ReadAllText("Protocols/users.proto"));
                 });
             });
-            PrepDb.PrepPopulation(app, env.IsProduction());
+           PrepDb.PrepPopulation(app, env.IsProduction());
         }
     }
 }

@@ -29,13 +29,15 @@ namespace UserService.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Dog")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfDogs")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RankInSystem")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

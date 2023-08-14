@@ -17,7 +17,8 @@ namespace UserService.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Dog = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    RankInSystem = table.Column<int>(type: "int", nullable: false),
+                    NumberOfDogs = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

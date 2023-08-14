@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "dotnet",
+			"task": "build",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"label": "Dotnet build"
+		},
+		{
+            "label": "Docker build",
+            "type": "shell",
+            "group": "build",
+            "command": "docker build -t printfkrzysztof/userservice ."
+        },
+        {
+            "label": "Docker push",
+            "type": "shell",
+            "group": "build",
+            "command": "docker push printfkrzysztof/userservice"
+        }
+	]
+}
