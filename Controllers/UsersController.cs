@@ -18,14 +18,16 @@ namespace UserService.Controllers
         private readonly IUserRepo _reporistory;
         private readonly IMapper _mapper;
         private readonly IForumDataClient _forumDataClient;
+        private readonly IDogDataClient _dogDataClient;
         private readonly IMessageBusClient _messageBusClient;
 
-        public UsersController(IUserRepo repository, IMapper mapper, IForumDataClient forumDataClient, IMessageBusClient messageBusClient)
+        public UsersController(IUserRepo repository, IMapper mapper, IForumDataClient forumDataClient, IMessageBusClient messageBusClient, IDogDataClient dogDataClient)
         {
             _reporistory = repository;
             _mapper = mapper;
             _forumDataClient = forumDataClient;
             _messageBusClient = messageBusClient;
+            _dogDataClient = dogDataClient;
         }
 
         [HttpGet]
@@ -66,6 +68,14 @@ namespace UserService.Controllers
                 Console.WriteLine($"--> Synchro Error: {ex.Message}");
             }
 
+            try
+            {
+                await _dogDataClient.SendUserToDog(userReadDto);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"--> Synchro Error: {ex.Message}");
+            }
             // Send Async Message
             try
             {

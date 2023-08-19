@@ -47,6 +47,7 @@ namespace UserService
             }
             
             services.AddHttpClient<IForumDataClient, HttpForumDataClient>();
+            services.AddHttpClient<IDogDataClient, HttpDogDataClient>();
             services.AddSingleton<IMessageBusClient, MessageBusClient>();
             services.AddScoped<IUserRepo, UserRepo>(); //IF they ask for IUser Repo we give them user repo
             services.AddGrpc();
@@ -58,6 +59,7 @@ namespace UserService
             });
 
             Console.WriteLine($"--> Forum Service Endpoint is {Configuration["ForumService"]}");
+            Console.WriteLine($"--> Dog Service Endpoint is {Configuration["DogService"]}");
 
         }
 
