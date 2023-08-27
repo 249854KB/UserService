@@ -69,9 +69,10 @@ namespace UserService
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "UserService v1"));
             }
+                app.UseSwagger(c=>
+                c.RouteTemplate = "api/swagger/{documentName}/swagger.json");
+            
 
             //app.UseHttpsRedirection();
 
